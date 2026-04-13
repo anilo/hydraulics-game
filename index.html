@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hydraulics Game</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body { font-family: Arial; background: #667eea; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .container { background: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        .header { color: white; text-align: center; margin-bottom: 20px; }
+        .stats { display: flex; gap: 20px; justify-content: center; margin-bottom: 20px; color: white; }
+        #gameCanvas { display: block; background: #87CEEB; border: 3px solid #333; }
+        .info { color: #ccc; margin-top: 20px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚙️ Hydraulics Simulator</h1>
+            <div class="stats">
+                <div>Pressure: <span id="pressureValue">0</span> PSI</div>
+                <div>Height: <span id="heightValue">0</span> m</div>
+                <div>Level: <span id="levelValue">1</span></div>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="info">
+            <p>W/Space: Pump | S/Ctrl: Release</p>
+        </div>
+    </div>
+    <script src="physics.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
