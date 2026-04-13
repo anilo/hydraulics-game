@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydraulics Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="game-container">
-        <canvas id="gameCanvas" width="800" height="600"></canvas>
-        <div id="controls">
-            <button id="startButton">Start</button>
-            <button id="pauseButton">Pause</button>
-        </div>
-        <div id="gauges">
-            <label for="speedGauge">Speed:</label>
-            <input id="speedGauge" type="range" min="0" max="100">
-            <label for="forceGauge">Force:</label>
-            <input id="forceGauge" type="range" min="0" max="100">
-        </div>
-        <div id="uiPanels">
-            <div id="scorePanel">Score: <span id="score">0</span></div>
-            <div id="statusPanel">Status: <span id="status">Running</span></div>
-        </div>
+    <header>
+        <h1>Welcome to the Hydraulics Game</h1>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Instructions</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
     </div>
-    <script src="physics.js"></script>
-    <script src="game.js"></script>
+    <main>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <p id="gameStatus">Game status: Not started</p>
+        <button id="startGame">Start Game</button>
+    </main>
+    <footer>
+        <p>&copy; 2026 Hydraulics Game. All rights reserved.</p>
+    </footer>
 </body>
 </html>
